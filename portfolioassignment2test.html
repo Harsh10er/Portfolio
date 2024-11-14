@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <link rel="stylesheet" href="index.css">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  
+    
+
+   <style>
+    /* Oswald Font Class */
+    .oswald {
+        font-family: "Oswald", sans-serif;
+        font-optical-sizing: auto;
+    }
+
+ 
+    .oswald-200 {
+        font-weight: 200;
+    }
+
+    .oswald-400 {
+        font-weight: 400;
+    }
+
+    .oswald-700 {
+        font-weight: 700;
+    }
+
+    .intro-section {
+        padding: 5em; 
+        background-color: white;
+        text-align: center; 
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    .social-links {
+        display: flex;
+        align-items: center;  
+        gap: 1.5em;  
+        justify-content: flex-start;  
+        margin-top: 1.5em;
+        width: 100%; 
+        padding-left: 0; /
+    }
+
+    /* Styling for individual links */
+    .social-links a {
+        text-decoration: none;
+        color: #333;
+        font-size: 1.5em;  
+        width: 3em;  
+        height: 3em;  
+        background-color: #eee;
+        border-radius: 50%;  
+        display: flex;
+        align-items: center;  
+        justify-content: center;  
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, transform 0.3s ease;  
+    }
+
+    /* Hover effect */
+    .social-links a:hover {
+        background-color: #444;  
+        color: #fff;  
+        transform: scale(1.1);  
+    }
+</style>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="title">Harsh Raj Portfolio</div>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#Certification">Certification</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="toggle-button" onclick="toggleTheme()">Night Mode</button>
+      
+    
+    </nav>
+      
+      
+      <section class="intro-section" id="home">
+        <div class="intro-text">
+            <h1 class="oswald oswald-700">Hello, it's me Harsh Raj</h1>
+            <p>Hello, I’m Harsh Raj – a dedicated and passionate BTech student specializing in Computer Science, with a keen interest in web development and Software Engineering. Currently studying at RP Sharma Institute of Technology, I’m set to graduate in 2025, equipped with a foundation in HTML, CSS, JavaScript, Node.js, and the MERN stack.</p>
+            <div class="social-links">
+                <br><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <a href="#" class="download-btn">Download CV</a>
+        </div>
+        <div class="intro-image">
+            <img src="IMG20200209155128.jpg" alt="Harsh Raj">
+        </div>
+    </section>
+  <!-- About Me Section -->
+  <section class="about-section" id="about">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>Hello! I'm Harsh Raj, a web developer with a passion for creating dynamic, responsive websites and applications. I have a strong foundation in HTML, CSS, JavaScript, and experience with frameworks like React and Node.js. I thrive in fast-paced environments and enjoy problem-solving challenges that come with coding. Outside of work, I’m constantly learning new technologies and improving my skills.</p>
+    </div>
+    <div class="about-image">
+      
+        <img src="IMAGE.jpg" alt="Harsh Raj">
+      <div class="caption"></div>
+    </div>
+  </section>
+  <section class="skills-section" id="skills">
+    <div class="skills-text">
+        <h2>My Skills</h2>
+    </div>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <div class="skill-label">HTML <span>90%</span></div>
+            <div class="progress-bar">
+                <div class="progress html" style="width: 90%;"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-label">JavaScript <span>40%</span></div>
+            <div class="progress-bar">
+                <div class="progress javascript" style="width: 40%;"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-label">MERN Stack <span>30%</span></div>
+            <div class="progress-bar">
+                <div class="progress mern" style="width: 30%;"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-label">C++ <span>95%</span></div>
+            <div class="progress-bar">
+                <div class="progress cpp" style="width: 95%;"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-label">Data Structures & Algorithms <span>70%</span></div>
+            <div class="progress-bar">
+                <div class="progress dsa" style="width: 70%;"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-label">Java <span>30%</ span></div>
+            <div class="progress-bar">
+                <div class="progress java" style="width: 30%;"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-label">DBMS <span>80%</span></div>
+            <div class="progress-bar">
+                <div class="progress dbms" style="width: 80%;"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="certifications-section" id="Certification">
+    <h2> Certifications</h2>
+    <div class="certifications-grid">
+        <div class="certification-card">
+            <img src="Coursera_Harsh.jpg" alt="Certification 1" class="certificate-image" onclick="openImage('Coursera_Harsh.jpg')">
+            <h3>Certification 1</h3>
+            <p>Details about Certification 1.</p>
+            <a href="CERTIFICATE1.jpg" class="view-certificate-btn" target="_blank">View Certificate</a>
+        </div>
+        <div class="certification-card">
+            <img src="CredentialGOOGLE.jpg" alt="Certification 2" class="certificate-image" onclick="openImage('CredentialGOOGLE.jpg')">
+            <h3>Certification 2</h3>
+            <p>Details about Certification 2.</p>
+            <a href="CERTIFICATE2.jpg" class="view-certificate-btn" target="_blank">View Certificate</a>
+        </div>
+        <div class="certification-card">
+            <img src="NPTELHARSH.jpg" alt="Certification 3" class="certificate-image" onclick="openImage('NPTELHARSH.jpg')">
+            <h3>Certification 3</h3>
+            <p>Details about Certification 3.</p>
+            <a href="NPTELHARSH.jpg" class="view-certificate-btn" target="_blank">View Certificate</a>
+        </div>
+    </div>
+</section>
+
+
+<div class="image-popup-overlay" id="imagePopupOverlay" onclick="closeImage()">
+    <img src="" alt="Popup Image" class="popup-image" id="popupImage">
+</div>
+
+
+
+<section class="services-section" id="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+        <!-- Web Development Card -->
+        <div class="service-card">
+            <i class="fas fa-code"></i> 
+            <h3>Web Development</h3>
+            <p>Crafting responsive, dynamic, and optimized web applications. We use modern frameworks to deliver smooth, scalable solutions tailored to meet your business needs.</p>
+        </div>
+
+        <!-- Web Design Card -->
+        <div class="service-card">
+            <i class="fas fa-paint-brush"></i> 
+            <h3>Web Design</h3>
+            <p>Creating visually stunning and user-friendly designs. We focus on user experience and aesthetics to make sure your website stands out and engages your audience.</p>
+        </div>
+
+        <!-- Database Management Card -->
+        <div class="service-card">
+            <i class="fas fa-database"></i> 
+            <h3>Database Management</h3>
+            <p>Implementing efficient, secure, and scalable databases. We manage your data with precision, ensuring high availability and robust data integrity.</p>
+        </div>
+    </div>
+</section>
+<section class="projects-section" id="projects">
+    <div class="projects-text">
+        <h2>My Projects</h2>
+        <p>Here are some of the projects I've worked on, showcasing my skills and creativity.</p>
+    </div>
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3>PC Building Website</h3>
+            <p>A comprehensive guide for custom PC building. Built with HTML, CSS, and JavaScript to provide a user-friendly interface with interactive features for component selection.</p>
+        </div>
+        <div class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>My personal portfolio website, designed with a modern UI using HTML, CSS, and JavaScript. It highlights my projects, skills, and contact details in an engaging layout.</p>
+        </div>
+        <div class="project-card">
+            <h3>Blog API</h3>
+            <p>A RESTful API created using Node.js and Express for a blogging platform. It includes CRUD operations for blog posts, user authentication, and token-based authorization.</p>
+        </div>
+        <div class="project-card">
+            <h3>E-Commerce Website</h3>
+            <p>A full-stack MERN project that allows users to browse, search, and purchase products. Includes secure payment integration and a real-time inventory system.</p>
+        </div>
+        <div class="project-card">
+            <h3>Weather App</h3>
+            <p>A weather forecasting application using JavaScript and APIs. It provides real-time weather updates for any location, including temperature, humidity, and wind speed.</p>
+        </div>
+        <div class="project-card">
+            <h3>Chat Application</h3>
+            <p>A real-time chat app built with Node.js, Express, and Socket.IO. Users can create rooms, join conversations, and send messages with instant updates.</p>
+        </div>
+    </div>
+</section>
+</section>
+<section class="contact-section">
+    <div class="contact-text">
+        <h2>Contact Us</h2>
+        <p>Have questions or need support? Reach out to us using the form below, and we’ll get back to you shortly!</p>
+    </div>
+    <form class="contact-form" action="#" method="post">
+        <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+            <textarea name="message" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="send-message-btn">Send Message</button>
+    </form>
+</section>
+</section>
+
+<footer class="footer-section">
+    <div class="footer-content">
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <h3>Follow Me</h3>
+            <div class="social-icons">
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="footer-contact">
+            <h3>Contact Me</h3>
+            <p>Email: <a href="harsh10er@gmail.com">harsh10er@gmail.com</a></p>
+            <p>Phone: +91 8002184224</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Harsh Raj . All rights reserved.</p>
+    </div>
+</footer>
+<script>
+    function toggleTheme() {
+        document.body.classList.toggle('dark-theme');
+        const button = document.querySelector('.toggle-button');
+        button.textContent = document.body.classList.contains('dark-theme') ? 'Day Mode' : 'Night Mode';
+    }
+    function openImage(imageSrc) {
+        const overlay = document.getElementById("imagePopupOverlay");
+        const popupImage = document.getElementById("popupImage");
+    
+       
+        popupImage.src = imageSrc;
+    
+       
+        overlay.style.display = "flex"; 
+    }
+    
+    function closeImage() {
+        const overlay = document.getElementById("imagePopupOverlay");
+    
+     
+        overlay.style.display = "none";
+    }
+</script> 
+</body>
+</html>
