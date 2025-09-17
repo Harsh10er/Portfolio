@@ -88,7 +88,6 @@
     transform: scale(1.05);
 }
 
-s
 /* Dark Theme Adjustments */
 .dark-theme {
     background-color: #222;
@@ -116,7 +115,6 @@ s
 .dark-theme .projects-section,
 .dark-theme .contact-section {
     background-color: #333; 
-/
 }
 .dark-theme .navbar .title {
     color: #eee; 
@@ -303,7 +301,7 @@ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 
 .intro-image img:hover {
 transform: translateY(-10px) scale(1.05);
-box-shadow: 0 12px 24px rgba(0,  0, 0, 0, 0.3);
+box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -317,6 +315,7 @@ box-shadow: 0 12px 24px rgba(0,  0, 0, 0, 0.3);
 .intro-text h1 {
     color: #333; 
     margin-bottom: 10px; 
+}
 
 .intro-text p {
     color: #666; 
@@ -461,7 +460,7 @@ transition: width 0.5s ease-in-out;
 .dsa { background: linear-gradient(90deg, #FF6F30, #FFA500); } 
 .java { background: linear-gradient(90deg, #007396, #0095D9); } 
 .dbms { background: linear-gradient(90deg, #4DB33D, #66CDAA); } 
-Updated HTML Structure
+/* removed stray text */
 
 .certifications-section {
     padding: 2em; 
@@ -834,4 +833,73 @@ textarea {
 
 .footer-bottom p {
     margin: 0;
+}
+
+/* Mobile responsiveness fixes */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding: 0.8em 1em;
+    }
+    .navbar .title {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.5em;
+    }
+    .navbar ul {
+        margin-left: 0;
+        gap: 1em;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .toggle-button {
+        margin-right: 0;
+        margin-top: 0.5em;
+    }
+
+    .intro-section {
+        flex-direction: column;
+        padding: 2em 1.2em;
+        text-align: center;
+    }
+    .intro-text {
+        padding: 1em 0;
+        margin-right: 0;
+        max-width: 100%;
+    }
+    .social-links {
+        justify-content: center;
+    }
+    .intro-image img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skills-section {
+        padding: 2em 1.2em;
+    }
+
+    .certifications-section h2 {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .projects-section {
+        padding: 2em 1.2em;
+    }
+
+    .contact-section {
+        padding: 2.5em 1.2em;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
