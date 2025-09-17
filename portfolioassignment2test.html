@@ -78,8 +78,13 @@
 <body>
     
     <nav class="navbar">
-        <div class="title">Harsh Raj Portfolio</div>
-        <ul>
+        <div class="title"><span class="brand-accent">Harsh</span> Raj <span class="brand-sub">Portfolio</span></div>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <ul class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -317,6 +322,15 @@
         const button = document.querySelector('.toggle-button');
         button.textContent = document.body.classList.contains('dark-theme') ? 'Day Mode' : 'Night Mode';
     }
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle.addEventListener('click', () => {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!expanded));
+        navLinks.classList.toggle('open');
+        navToggle.classList.toggle('open');
+    });
     function openImage(imageSrc) {
         const overlay = document.getElementById("imagePopupOverlay");
         const popupImage = document.getElementById("popupImage");

@@ -7,46 +7,57 @@
 /* Navbar Styling */
 .navbar {
     display: flex;
-
     align-items: center;
-   padding: 1em 2em;
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    position: fixed; 
+    justify-content: space-between;
+    padding: 0.8em 1.2em;
+    background: rgba(255, 255, 255, 0.9);
+    color: #111;
+    position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    backdrop-filter: blur(10px); 
-    transition: background-color 0.3s;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .navbar .title {
-    font-size: 1.8em; 
-    font-weight: bold; /* Bold title */
-    color: #000;
-    
+    font-size: 1.4em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #111;
+    display: flex;
+    align-items: center;
+    gap: 0.35em;
+}
+.brand-accent {
+    color: #4A90E2;
+}
+.brand-sub {
+    font-size: 0.9em;
+    color: #666;
 }
 
-.navbar ul {
+.nav-links {
     list-style: none;
     display: flex;
-    gap: 2em; 
-    margin: 0 auto;
-    margin-left: 3em; 
+    gap: 1.2em;
+    margin: 0;
+    padding: 0;
 }
-.navbar ul li {
+.nav-links li {
     display: inline;
 }
 
-.navbar ul li a {
+.nav-links li a {
     color: #000000; 
     text-decoration: none;
     font-weight: bold; 
     transition: color 0.3s, text-shadow 0.3s; /* Smooth transition */
-   
+    padding: 0.4em 0.6em;
+    border-radius: 6px;
 }
 
-.navbar ul li a:hover {
+.nav-links li a:hover {
     color: #e40b0b; 
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
@@ -56,13 +67,35 @@
     cursor: pointer;
     padding: 0.5em 1em;
     border: none;
-    background-color: rgba(255, 255, 255, 0.3);
-    color: #020303;
+    background-color: #111;
+    color: #fff;
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s;
-    margin-right: 10em; 
+    margin-left: 0.8em;
 }
+/* Hamburger button */
+.nav-toggle {
+    display: none;
+    width: 40px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+.nav-toggle .bar {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #111;
+    margin: 4px 0;
+    transition: transform 0.3s, opacity 0.3s;
+}
+.nav-toggle.open .bar:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav-toggle.open .bar:nth-child(2) { opacity: 0; }
+.nav-toggle.open .bar:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 .image-popup-overlay {
     display: none; 
     position: fixed; 
@@ -95,14 +128,14 @@
 }
 
 .dark-theme .navbar {
-    background: rgba(0, 0, 0, 0.8); 
+    background: rgba(20, 20, 20, 0.9); 
 }
 
-.dark-theme .navbar ul li a {
+.dark-theme .nav-links li a {
     color: #ddd; 
 }
 
-.dark-theme .navbar ul li a:hover {
+.dark-theme .nav-links li a:hover {
     color: #fff; 
     text-shadow: none; 
 }
@@ -119,6 +152,8 @@
 .dark-theme .navbar .title {
     color: #eee; 
 }
+.dark-theme .nav-toggle .bar { background: #eee; }
+.dark-theme .toggle-button { background-color: #444; }
 .dark-theme .social-links a {
     background-color: #444; 
     color: #fff; 
@@ -836,26 +871,30 @@ textarea {
 }
 
 /* Mobile responsiveness fixes */
+@media (max-width: 900px) {
+    .nav-links { gap: 0.8em; }
+}
 @media (max-width: 768px) {
-    .navbar {
-        flex-wrap: wrap;
-        padding: 0.8em 1em;
+    .nav-toggle { display: inline-flex; }
+    .nav-links {
+        position: absolute;
+        top: 56px;
+        left: 0;
+        right: 0;
+        background: rgba(255,255,255,0.98);
+        border-bottom: 1px solid rgba(0,0,0,0.06);
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        padding: 0.6em 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
     }
-    .navbar .title {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 0.5em;
-    }
-    .navbar ul {
-        margin-left: 0;
-        gap: 1em;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .toggle-button {
-        margin-right: 0;
-        margin-top: 0.5em;
-    }
+    .nav-links.open { max-height: 320px; }
+    .nav-links li { display: block; width: 100%; text-align: center; }
+    .nav-links li a { display: block; padding: 0.8em 1em; }
+    .toggle-button { margin-top: 0.2em; }
 
     .intro-section {
         flex-direction: column;
